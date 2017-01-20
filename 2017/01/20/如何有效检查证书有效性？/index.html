@@ -4,22 +4,44 @@
 <head>
   <meta charset="UTF-8">
   
-    <title>技术无界限！分享与交流!</title>
+    <title>如何有效检查证书有效性？ | 技术无界限！分享与交流!</title>
     <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
     
     <meta name="author" content="Lao k17">
     
 
     
-    <meta name="description" content="记录网络安全,渗透渗透,信息安全,代码审计,权限提升,脚本漏洞,无线安全,社会工程,安全文献,安全媒体。">
-<meta property="og:type" content="website">
-<meta property="og:title" content="技术无界限！分享与交流!">
-<meta property="og:url" content="http://www.sec.com/index.html">
+    <meta name="description" content="证书有效性，一般要检查三点：
+
+验证证书是否是否在有效期内？
+检查证书上有签发起始时间和过期时间思考：如何保证取到的时间点是可信的？
+
+
+验证证书是否被吊销了？
+吊销的证书是无效的，一般有俩种方式：– CRL（Certificate Revocation List）,证书吊销列表，离线方式；– OCSP（Online Certificate Status Protocol ）,在线证书状态检查协议">
+<meta property="og:type" content="article">
+<meta property="og:title" content="如何有效检查证书有效性？">
+<meta property="og:url" content="http://www.sec.com/2017/01/20/如何有效检查证书有效性？/index.html">
 <meta property="og:site_name" content="技术无界限！分享与交流!">
-<meta property="og:description" content="记录网络安全,渗透渗透,信息安全,代码审计,权限提升,脚本漏洞,无线安全,社会工程,安全文献,安全媒体。">
+<meta property="og:description" content="证书有效性，一般要检查三点：
+
+验证证书是否是否在有效期内？
+检查证书上有签发起始时间和过期时间思考：如何保证取到的时间点是可信的？
+
+
+验证证书是否被吊销了？
+吊销的证书是无效的，一般有俩种方式：– CRL（Certificate Revocation List）,证书吊销列表，离线方式；– OCSP（Online Certificate Status Protocol ）,在线证书状态检查协议">
+<meta property="og:updated_time" content="2017-01-20T03:16:41.617Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="技术无界限！分享与交流!">
-<meta name="twitter:description" content="记录网络安全,渗透渗透,信息安全,代码审计,权限提升,脚本漏洞,无线安全,社会工程,安全文献,安全媒体。">
+<meta name="twitter:title" content="如何有效检查证书有效性？">
+<meta name="twitter:description" content="证书有效性，一般要检查三点：
+
+验证证书是否是否在有效期内？
+检查证书上有签发起始时间和过期时间思考：如何保证取到的时间点是可信的？
+
+
+验证证书是否被吊销了？
+吊销的证书是无效的，一般有俩种方式：– CRL（Certificate Revocation List）,证书吊销列表，离线方式；– OCSP（Online Certificate Status Protocol ）,在线证书状态检查协议">
 
     
     <link rel="alternative" href="/atom.xml" title="技术无界限！分享与交流!" type="application/atom+xml">
@@ -77,257 +99,10 @@
 </div>
     </header>
     <div id="container">
-      <div id="main">
-
-   
-    
-    <article class="post-expand post" itemprop="articleBody"> 
-        <header class="article-info clearfix">
-  <h1 itemprop="name">
-    
-      <a href="/2017/01/20/hexo/source/fenlei/" title="jishubu123" itemprop="url">jishubu123</a>
-  </h1>
-  <p class="article-author">By
-       
-		<a href="/about" title="Lao k17" target="_blank" itemprop="author">Lao k17</a>
-		
-  <p class="article-time">
-    <time datetime="2017-01-20T09:54:53.000Z" itemprop="datePublished"> 发表于 2017-01-20</time>
-    
-  </p>
-</header>
-    <div class="article-content">
-        
-        
-        
-        
-        <p class="article-more-link">
-          
-       </p>
-    </div>
-    <footer class="article-footer clearfix">
-<div class="article-catetags">
-
-
-</div>
-
-
-
-
-<div class="comments-count">
-	
-</div>
-
-</footer>
-
-
-    </article>
-
-
-
-
-
-
-   
-    
-    <article class="post-expand post" itemprop="articleBody"> 
-        <header class="article-info clearfix">
-  <h1 itemprop="name">
-    
-      <a href="/2017/01/20/jishubu/" title="jishubu" itemprop="url">jishubu</a>
-  </h1>
-  <p class="article-author">By
-       
-		<a href="/about" title="Lao k17" target="_blank" itemprop="author">Lao k17</a>
-		
-  <p class="article-time">
-    <time datetime="2017-01-20T09:53:54.000Z" itemprop="datePublished"> 发表于 2017-01-20</time>
-    
-  </p>
-</header>
-    <div class="article-content">
-        
-        
-        
-        
-        <p class="article-more-link">
-          
-       </p>
-    </div>
-    <footer class="article-footer clearfix">
-<div class="article-catetags">
-
-
-</div>
-
-
-
-
-<div class="comments-count">
-	
-</div>
-
-</footer>
-
-
-    </article>
-
-
-
-
-
-
-   
-    
-    <article class="post-expand post" itemprop="articleBody"> 
-        <header class="article-info clearfix">
-  <h1 itemprop="name">
-    
-      <a href="/2017/01/20/fenlei-1/" title="ceshi123" itemprop="url">ceshi123</a>
-  </h1>
-  <p class="article-author">By
-       
-		<a href="/about" title="Lao k17" target="_blank" itemprop="author">Lao k17</a>
-		
-  <p class="article-time">
-    <time datetime="2017-01-20T09:53:23.000Z" itemprop="datePublished"> 发表于 2017-01-20</time>
-    
-  </p>
-</header>
-    <div class="article-content">
-        
-        
-        
-        
-        <p class="article-more-link">
-          
-       </p>
-    </div>
-    <footer class="article-footer clearfix">
-<div class="article-catetags">
-
-
-</div>
-
-
-
-
-<div class="comments-count">
-	
-</div>
-
-</footer>
-
-
-    </article>
-
-
-
-
-
-
-   
-    
-    <article class="post-expand post" itemprop="articleBody"> 
-        <header class="article-info clearfix">
-  <h1 itemprop="name">
-    
-      <a href="/2017/01/20/fenlei/" title="ceshi" itemprop="url">ceshi</a>
-  </h1>
-  <p class="article-author">By
-       
-		<a href="/about" title="Lao k17" target="_blank" itemprop="author">Lao k17</a>
-		
-  <p class="article-time">
-    <time datetime="2017-01-20T09:52:44.000Z" itemprop="datePublished"> 发表于 2017-01-20</time>
-    
-  </p>
-</header>
-    <div class="article-content">
-        
-        
-        
-        
-        <p class="article-more-link">
-          
-       </p>
-    </div>
-    <footer class="article-footer clearfix">
-<div class="article-catetags">
-
-
-</div>
-
-
-
-
-<div class="comments-count">
-	
-</div>
-
-</footer>
-
-
-    </article>
-
-
-
-
-
-
-   
-    
-    <article class="post-expand post" itemprop="articleBody"> 
-        <header class="article-info clearfix">
-  <h1 itemprop="name">
-    
-      <a href="/2017/01/20/yishengbubian/" title="yishengbubian" itemprop="url">yishengbubian</a>
-  </h1>
-  <p class="article-author">By
-       
-		<a href="/about" title="Lao k17" target="_blank" itemprop="author">Lao k17</a>
-		
-  <p class="article-time">
-    <time datetime="2017-01-20T09:51:11.000Z" itemprop="datePublished"> 发表于 2017-01-20</time>
-    
-  </p>
-</header>
-    <div class="article-content">
-        
-        
-        
-        
-        <p class="article-more-link">
-          
-       </p>
-    </div>
-    <footer class="article-footer clearfix">
-<div class="article-catetags">
-
-
-</div>
-
-
-
-
-<div class="comments-count">
-	
-</div>
-
-</footer>
-
-
-    </article>
-
-
-
-
-
-
-   
-    
-    <article class="post-expand post" itemprop="articleBody"> 
-        <header class="article-info clearfix">
+      <div id="main" class="post" itemscope itemprop="blogPost">
+  
+	<article itemprop="articleBody"> 
+		<header class="article-info clearfix">
   <h1 itemprop="name">
     
       <a href="/2017/01/20/如何有效检查证书有效性？/" title="如何有效检查证书有效性？" itemprop="url">如何有效检查证书有效性？</a>
@@ -341,9 +116,16 @@
     
   </p>
 </header>
-    <div class="article-content">
-        
-        <p>证书有效性，一般要检查三点：</p>
+	<div class="article-content">
+		
+		<div id="toc" class="toc-article">
+			<strong class="toc-title">文章目录</strong>
+		
+			
+		
+		</div>
+		
+		<p>证书有效性，一般要检查三点：</p>
 <ol>
 <li>验证证书是否是否在有效期内？<blockquote>
 <p>检查证书上有签发起始时间和过期时间<br><strong>思考</strong>：如何保证取到的时间点是可信的？</p>
@@ -358,14 +140,9 @@
 </blockquote>
 </li>
 </ol>
-
-        
-        
-        <p class="article-more-link">
-          
-       </p>
-    </div>
-    <footer class="article-footer clearfix">
+  
+	</div>
+		<footer class="article-footer clearfix">
 <div class="article-catetags">
 
 
@@ -378,137 +155,51 @@
 
 
 
-
-<div class="comments-count">
+	<div class="article-share" id="share">
 	
-</div>
+	  <div data-url="http://www.sec.com/2017/01/20/如何有效检查证书有效性？/" data-title="如何有效检查证书有效性？ | 技术无界限！分享与交流!" data-tsina="null" class="share clearfix">
+	  </div>
+	
+	</div>
+
 
 </footer>
 
-
-    </article>
-
-
-
-
-
-
-   
-    
-    <article class="post-expand post" itemprop="articleBody"> 
-        <header class="article-info clearfix">
-  <h1 itemprop="name">
-    
-      <a href="/2017/01/19/IT-SECURITY/" title="IT SECURITY" itemprop="url">IT SECURITY</a>
-  </h1>
-  <p class="article-author">By
-       
-		<a href="/about" title="Lao k17" target="_blank" itemprop="author">Lao k17</a>
-		
-  <p class="article-time">
-    <time datetime="2017-01-19T09:12:37.000Z" itemprop="datePublished"> 发表于 2017-01-19</time>
-    
-  </p>
-</header>
-    <div class="article-content">
-        
-        <p>IT SECURITY<br>hello 组织中实现了哪些不同的IT安全服务？<br>黑客社区的这一行为迫使质量保证和IT安全性之间出现了另一个合作点。<br>IT安全分析师还需要设计每个阶段需要运行的测试类型。<br>对于现在的组织而言，“更好地工作”就意味着“协同工作”，这为IT安全提出了新的挑战。 </p>
-
-        
-        
-        <p class="article-more-link">
-          
-       </p>
-    </div>
-    <footer class="article-footer clearfix">
-<div class="article-catetags">
-
-
-  <div class="article-tags">
-  
-  <span></span> <a href="/tags/IT/">IT</a><a href="/tags/SECURITY/">SECURITY</a><a href="/tags/安全/">安全</a>
-  </div>
-
-</div>
-
-
-
-
-<div class="comments-count">
+   	       
+	</article>
 	
-</div>
-
-</footer>
-
-
-    </article>
-
-
-
-
-
-
-   
-    
-    <article class="post-expand post" itemprop="articleBody"> 
-        <header class="article-info clearfix">
-  <h1 itemprop="name">
-    
-      <a href="/2017/01/19/hello-world/" title="Hello World" itemprop="url">Hello World</a>
-  </h1>
-  <p class="article-author">By
-       
-		<a href="/about" title="Lao k17" target="_blank" itemprop="author">Lao k17</a>
-		
-  <p class="article-time">
-    <time datetime="2017-01-19T03:57:00.433Z" itemprop="datePublished"> 发表于 2017-01-19</time>
-    
-  </p>
-</header>
-    <div class="article-content">
-        
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
-
-        
-        
-        <p class="article-more-link">
-          
-       </p>
-    </div>
-    <footer class="article-footer clearfix">
-<div class="article-catetags">
-
-
+<nav class="article-nav clearfix">
+ 
+ <div class="prev" >
+ <a href="/2017/01/20/yishengbubian/" title="yishengbubian">
+  <strong>上一篇：</strong><br/>
+  <span>
+  yishengbubian</span>
+</a>
 </div>
 
 
+<div class="next">
+<a href="/2017/01/19/IT-SECURITY/"  title="IT SECURITY">
+ <strong>下一篇：</strong><br/> 
+ <span>IT SECURITY
+</span>
+</a>
+</div>
 
+</nav>
 
-<div class="comments-count">
 	
-</div>
 
-</footer>
-
-
-    </article>
-
-
-
-
-
-
-
-</div>
+</div>  
       <div class="openaside"><a class="navbutton" href="#" title="显示侧边栏"></a></div>
+
+  <div id="toc" class="toc-aside">
+  <strong class="toc-title">文章目录</strong>
+ 
+ 
+ 
+  </div>
 
 <div id="asidepart">
 <div class="closeaside"><a class="closebutton" href="#" title="隐藏侧边栏"></a></div>
@@ -710,12 +401,89 @@ $(document).ready(function(){
       m.removeClass('moveMain');
       a.css('display', 'block').removeClass('fadeOut');
       o.css('display', 'none');
+      
+      $('#toc.toc-aside').css('display', 'none');
         
     }
   });
 });
 </script>
 
+<script type="text/javascript">
+$(document).ready(function(){ 
+  var ai = $('.article-content>iframe'),
+      ae = $('.article-content>embed'),
+      t  = $('#toc'),
+      ta = $('#toc.toc-aside'),
+      o  = $('.openaside'),
+      c  = $('.closeaside');
+  if(ai.length>0){
+    ai.wrap('<div class="video-container" />');
+  };
+  if(ae.length>0){
+   ae.wrap('<div class="video-container" />');
+  };
+  c.click(function(){
+    ta.css('display', 'block').addClass('fadeIn');
+  });
+  o.click(function(){
+    ta.css('display', 'none');
+  });
+  $(window).scroll(function(){
+    ta.css("top",Math.max(140,320-$(this).scrollTop()));
+  });
+});
+</script>
+
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  var $this = $('.share'),
+      url = $this.attr('data-url'),
+      encodedUrl = encodeURIComponent(url),
+      title = $this.attr('data-title'),
+      tsina = $this.attr('data-tsina'),
+      description = $this.attr('description');
+  var html = [
+  '<div class="hoverqrcode clearfix"></div>',
+  '<a class="overlay" id="qrcode"></a>',
+  '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="article-share-facebook" target="_blank" title="Facebook"></a>',
+  '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="article-share-twitter" target="_blank" title="Twitter"></a>',
+  '<a href="#qrcode" class="article-share-qrcode" title="微信"></a>',
+  '<a href="http://widget.renren.com/dialog/share?resourceUrl=' + encodedUrl + '&srcUrl=' + encodedUrl + '&title=' + title +'" class="article-share-renren" target="_blank" title="人人"></a>',
+  '<a href="http://service.weibo.com/share/share.php?title='+title+'&url='+encodedUrl +'&ralateUid='+ tsina +'&searchPic=true&style=number' +'" class="article-share-weibo" target="_blank" title="微博"></a>',
+  '<span title="Share to"></span>'
+  ].join('');
+  $this.append(html);
+
+  $('.hoverqrcode').hide();
+
+  var myWidth = 0;
+  function updatehoverqrcode(){
+    if( typeof( window.innerWidth ) == 'number' ) {
+      myWidth = window.innerWidth;
+    } else if( document.documentElement && document.documentElement.clientWidth) {
+      myWidth = document.documentElement.clientWidth;
+    };
+    var qrsize = myWidth > 1024 ? 200:100;
+    var options = {render: 'image', size: qrsize, fill: '#2ca6cb', text: url, radius: 0.5, quiet: 1};
+    var p = $('.article-share-qrcode').position();
+    $('.hoverqrcode').empty().css('width', qrsize).css('height', qrsize)
+                          .css('left', p.left-qrsize/2+20).css('top', p.top-qrsize-10)
+                          .qrcode(options);
+  };
+  $(window).resize(function(){
+    $('.hoverqrcode').hide();
+  });
+  $('.article-share-qrcode').click(function(){
+    updatehoverqrcode();
+    $('.hoverqrcode').toggle();
+  });
+  $('.article-share-qrcode').hover(function(){}, function(){
+      $('.hoverqrcode').hide();
+  });
+});   
+</script>
 
 
 
@@ -786,4 +554,4 @@ var _hmt = _hmt || [];
 <!-- Tiny_search End -->
 
   </body>
- </html>
+</html>

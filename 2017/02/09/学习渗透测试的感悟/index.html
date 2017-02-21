@@ -4,23 +4,38 @@
 <head>
   <meta charset="UTF-8">
   
-    <title>test | 攻VS防，战略与战术！马拉松式工作！</title>
+    <title>学习渗透测试的感悟 | 攻VS防，战略与战术！马拉松式工作！</title>
     <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
     
     <meta name="author" content="Lao k17">
     
 
     
-    <meta name="description" content="记录网络安全,渗透渗透,信息安全,代码审计,权限提升,脚本漏洞,无线安全,社会工程,安全文献,安全媒体。">
+    <meta name="description" content="PS: 内容摘自一位安全同仁Goocher
+渗透测试的定义：对于现有系统的安全评估，发现存在的安全问题进行报告 
+以下对于安全都仅限于web安全
+安全最近被炒的很热，各种ctf，培训，教程，视频都很多，让新手往往都目不暇接，尤其是没有接触过的人感觉都好NB，我也要那么NB，
+接着就会进入一个循环翻看各种视频教程，各种文章教程，最终发现还是感觉自己是个半吊子，发现现实的渗透和视频里面的差距很大，
+为">
 <meta property="og:type" content="article">
-<meta property="og:title" content="test">
-<meta property="og:url" content="http://desire.github.io/2017/01/20/test/index.html">
+<meta property="og:title" content="学习渗透测试的感悟">
+<meta property="og:url" content="http://desire.github.io/2017/02/09/学习渗透测试的感悟/index.html">
 <meta property="og:site_name" content="攻VS防，战略与战术！马拉松式工作！">
-<meta property="og:description" content="记录网络安全,渗透渗透,信息安全,代码审计,权限提升,脚本漏洞,无线安全,社会工程,安全文献,安全媒体。">
-<meta property="og:updated_time" content="2017-01-20T10:52:47.576Z">
+<meta property="og:description" content="PS: 内容摘自一位安全同仁Goocher
+渗透测试的定义：对于现有系统的安全评估，发现存在的安全问题进行报告 
+以下对于安全都仅限于web安全
+安全最近被炒的很热，各种ctf，培训，教程，视频都很多，让新手往往都目不暇接，尤其是没有接触过的人感觉都好NB，我也要那么NB，
+接着就会进入一个循环翻看各种视频教程，各种文章教程，最终发现还是感觉自己是个半吊子，发现现实的渗透和视频里面的差距很大，
+为">
+<meta property="og:updated_time" content="2017-02-09T08:31:07.964Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="test">
-<meta name="twitter:description" content="记录网络安全,渗透渗透,信息安全,代码审计,权限提升,脚本漏洞,无线安全,社会工程,安全文献,安全媒体。">
+<meta name="twitter:title" content="学习渗透测试的感悟">
+<meta name="twitter:description" content="PS: 内容摘自一位安全同仁Goocher
+渗透测试的定义：对于现有系统的安全评估，发现存在的安全问题进行报告 
+以下对于安全都仅限于web安全
+安全最近被炒的很热，各种ctf，培训，教程，视频都很多，让新手往往都目不暇接，尤其是没有接触过的人感觉都好NB，我也要那么NB，
+接着就会进入一个循环翻看各种视频教程，各种文章教程，最终发现还是感觉自己是个半吊子，发现现实的渗透和视频里面的差距很大，
+为">
 
     
     <link rel="alternative" href="/atom.xml" title="攻VS防，战略与战术！马拉松式工作！" type="application/atom+xml">
@@ -80,14 +95,14 @@
 		<header class="article-info clearfix">
   <h1 itemprop="name">
     
-      <a href="/2017/01/20/test/" title="test" itemprop="url">test</a>
+      <a href="/2017/02/09/学习渗透测试的感悟/" title="学习渗透测试的感悟" itemprop="url">学习渗透测试的感悟</a>
   </h1>
   <p class="article-author">By
        
 		<a href="/about" title="Lao k17" target="_blank" itemprop="author">Lao k17</a>
 		
   <p class="article-time">
-    <time datetime="2017-01-20T10:52:28.000Z" itemprop="datePublished"> Published 2017-01-20</time>
+    <time datetime="2017-02-09T08:20:08.000Z" itemprop="datePublished"> Published 2017-02-09</time>
     
   </p>
 </header>
@@ -100,21 +115,51 @@
 		
 		</div>
 		
-		  
+		<p><strong>PS</strong>: 内容摘自一位安全同仁Goocher</p>
+<p><strong>渗透测试的定义：对于现有系统的安全评估，发现存在的安全问题进行报告 </strong></p>
+<p>以下对于安全都仅限于web安全</p>
+<pre><code>安全最近被炒的很热，各种ctf，培训，教程，视频都很多，让新手往往都目不暇接，尤其是没有接触过的人感觉都好NB，我也要那么NB，
+接着就会进入一个循环翻看各种视频教程，各种文章教程，最终发现还是感觉自己是个半吊子，发现现实的渗透和视频里面的差距很大，
+为什么感觉视频里面就做的那么轻松，或者是看别人的渗透文章感觉他们怎么就能发现这样的漏洞呢，我怎么就不行，
+我也对漏洞原理了解很清楚怎么就找不到呢。而且也很膜拜那些在各种src上刷屏的人。
+</code></pre><p><strong>我总结了一下我的看法：</strong></p>
+<pre><code>视频中一般讲解的都是sqli,xss,csrf,lfi/rfi等基本漏洞，原理可以讲的很清楚，利用也会讲一些，但是对于最重要的一步如何去识别、
+特定的漏洞讲的就很少了，而这个人认为是最关键的一步，因为要识别一个漏洞才是你对一个漏洞理解和掌握的基本
+文章中出现的渗透测试的文章，并不会是仅仅通过一个sql注入就会拿到权限，他们会用很多现实中才会用到的一些第三方组件的
+已知漏洞，还有一些中间件的错误配置来拿到权限，但这些文章和教程都不会跟你讲，上来就是各种常见的信息收集手段，各种常见
+web漏洞识别，不行旁注或者弱口令，接着就到后渗透阶段，这样讲会让初学者的思路很受限。
+</code></pre><p><strong>如果是想刷src的我给出以下建议：</strong></p>
+<pre><code>对于自建站（没有使用已知的cms来搭建），这样的站往往会存在很多sqli,xss,csrf等漏洞，还会存在一些权限控制不当，越权，
+密码重置漏洞，逻辑漏洞（这样的漏洞wooyun已经总结了文章）这些东西都需要不断的去实战测试提升自己的思路和技巧
+对于使用已知的cms来搭建的站，需要在收集到目标站的cms版本信息，以及一些第三方组件的版本信息然后来搜索是否存在已知漏洞
+</code></pre><a id="more"></a>
+<pre><code>对于很知名的一些漏洞需要做到熟练识别和利用，java反序列化漏洞, image命令执行漏洞，fastcgi命令执行漏洞，解析漏洞配合
+fastcgi，struts2命令执行漏洞，shellshock漏洞，heardbleed漏洞，总之是就是范围广，危害大。
+</code></pre><p><strong>如果是想获得入侵拿站的能力：</strong></p>
+<pre><code>上面的技术你必须要具备，接着你可以做到熟练的信息收集，识别出该组织站点范围，使用的各种服务版本，第三方组件版本，
+尽可能的爬取更多的文件和目录（可能是基于restful的格式，这个就需要平时的多多积累），还有了解一些常见的服务端口，
+对于服务的错误配置造成的安全漏洞等等都需要掌握。最重要：识别漏洞（前提条件，如何触发，如何查找），验证漏洞
+（测试是否存在），利用漏洞（能否到达漏洞利用的预期），往往在新漏洞爆发的时候就是刷一波src的好机会，也是一波拿站的好机会，
+所以作为安全爱好者第一手的安全信息是必须的，通过rss订阅器订阅博客及时获取最新的安全信息。还有一些：挂马，
+水坑，钓鱼的一些APT技术也是跟以上类似，需要你掌握漏洞识别，验证，利用
+</code></pre><p><strong>自己总结的一个实践路线：</strong></p>
+<pre><code>收集已知漏洞，可以通过各种网络手段去查找目标，并成功利用
+可以通过自己的识别手段写一个简单的扫描器来批量查找该类型的漏洞，并利用
+对于常见的web漏洞（xss，sqli，xxe），通过搜索引擎查找目标，验证是否有站点存在漏洞
+再基于上面的利用方式写一个简单的扫描器（可能免费的扫描器已经满足，但是有一些地方他是无法发现和利用）
+针对一个目标站点进行以上漏洞的检查
+熟练的掌握了以上技术的话，可以针对一个特定的域名进行查询该域名下的二级子域名是否存在漏洞（基于上面的漏洞，可能无法覆盖全）
+</code></pre><p><strong>忠告：</strong><br>    所以没必要上来就是要学习什么html,css,javascript,php,python,sql,linux操作系统管理，操作系统原理，数据库，网络（ccna）<br>    这些东西固然重要，但是你在实际渗透中并不需要全部掌握，只是需要其中的一点点知识和理论理解。当你真正需要做更深入的研究的时候你再去了解相关的细节。</p>
+  
 	</div>
 		<footer class="article-footer clearfix">
 <div class="article-catetags">
 
 <div class="article-categories">
   <span></span>
-  <a class="article-category-link" href="/categories/测试/">测试</a>
+  <a class="article-category-link" href="/categories/技能储备与交流/">技能储备与交流</a>
 </div>
 
-
-  <div class="article-tags">
-  
-  <span></span> <a href="/tags/安全/">安全</a><a href="/tags/IT/">IT</a><a href="/tags/SECURITY/">SECURITY</a>
-  </div>
 
 </div>
 
@@ -122,7 +167,7 @@
 
 	<div class="article-share" id="share">
 	
-	  <div data-url="http://desire.github.io/2017/01/20/test/" data-title="test | 攻VS防，战略与战术！马拉松式工作！" data-tsina="null" class="share clearfix">
+	  <div data-url="http://desire.github.io/2017/02/09/学习渗透测试的感悟/" data-title="学习渗透测试的感悟 | 攻VS防，战略与战术！马拉松式工作！" data-tsina="null" class="share clearfix">
 	  </div>
 	
 	</div>
@@ -135,19 +180,11 @@
 	
 <nav class="article-nav clearfix">
  
- <div class="prev" >
- <a href="/2017/01/20/jishubu/" title="jishubu">
-  <strong>上一篇：</strong><br/>
-  <span>
-  jishubu</span>
-</a>
-</div>
-
 
 <div class="next">
-<a href="/2017/01/20/password/"  title="password">
+<a href="/2017/02/09/安全人员基本技能/"  title="安全人员基本技能">
  <strong>下一篇：</strong><br/> 
- <span>password
+ <span>安全人员基本技能
 </span>
 </a>
 </div>
